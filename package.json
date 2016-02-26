@@ -1,0 +1,35 @@
+{
+  "name": "app-base",
+  "version": "0.0.0",
+  "description": "Beating the boilerplate with elegance. Basic and common methods for your node.js application.",
+  "repository": "tunnckoCore/app-base",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "precommit.silent": true,
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "standard && node test.js"
+  },
+  "dependencies": {
+    "class-utils": "^0.3.1",
+    "define-property": "^0.2.5",
+    "delegate-properties": "github:tunnckocore/delegate-properties"
+  },
+  "devDependencies": {
+    "assertit": "^0.1.0",
+    "pre-commit": "*"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "app-base"
+  ],
+  "verb": {
+    "toc": false,
+    "layout": "empty",
+    "tasks": [
+      "readme"
+    ]
+  }
+}
