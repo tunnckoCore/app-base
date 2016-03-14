@@ -74,14 +74,12 @@ console.log(app._parent_._parent_._parent_) // => undefined
 console.log('=== Bar prototype methods =')
 console.log(app.delegate)
 console.log(app.define)
-console.log(app.visit)
-console.log(app.isObject)
 
 // Bar static methods
 console.log('=== Bar static methods =')
 console.log(Bar.delegate)
-console.log(Bar.inherit)
 console.log(Bar.define)
+console.log(Bar.extend)
 
 /**
  * [a description]
@@ -105,15 +103,13 @@ console.log(a._parent_.foo) // => undefined
 console.log(a._parent_.isFooHidden) // => undefined
 console.log(a._parent_.cache) // => undefined
 
-// Bar prototype methods
+// Foo prototype methods
 console.log('=== Foo prototype methods =')
 console.log(a.delegate)
 console.log(a.define)
-console.log(a.visit)
-console.log(a.isObject)
 
-// Bar static methods
+// Foo static methods
 console.log('=== Foo static methods =')
 console.log(Foo.delegate)
-console.log(Foo.inherit)
 console.log(Foo.define)
+console.log(Foo.extend)

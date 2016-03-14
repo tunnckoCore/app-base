@@ -7,7 +7,7 @@
 
 'use strict'
 
-var cu = require('class-utils')
+var extend = require('static-extend')
 var define = require('define-property')
 var delegate = require('delegate-properties')
 
@@ -25,20 +25,17 @@ delegate(AppBase.prototype, {
   define: function defineProperty (key, value) {
     define(this, key, value)
     return this
-  },
-  isObject: cu.isObject
+  }
 })
 
 delegate(AppBase, {
   delegate: delegate,
-  inherit: cu.inherit,
   define: define
 })
 
-define(AppBase, 'extend', cu.extend(AppBase, function extend (Child) {
+define(AppBase, 'extend', extend(AppBase, function (Child) {
   delegate(Child, {
     delegate: delegate,
-    inherit: cu.inherit,
     define: define
   })
 }))
