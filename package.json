@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "define-property": "^0.2.5",
-    "delegate-properties": "^0.3.0",
+    "delegate-properties": "github:tunnckoCore/delegate-properties",
     "static-extend": "^0.1.1"
   },
   "devDependencies": {
