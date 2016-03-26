@@ -4,9 +4,11 @@
 
 [![code climate][codeclimate-img]][codeclimate-url] [![standard code style][standard-img]][standard-url] [![travis build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![dependency status][david-img]][david-url]
 
-## Install
+## That's temp fork of [app-base][]
+> If you want to install it use the `user/repo` pattern that [npm][] provides.
+
 ```
-npm i app-base --save
+npm i tunnckoCore/app-base --save
 ```
 
 ## Usage
@@ -25,22 +27,29 @@ app.hello('bar', 'qux') // => 'Hello bar qux'
 ```
 
 ### Instance methods
+> Using following libraries, they internally pass `this` (the instance) as first argument.
+
+- [delegate-properties][] `app.delegate(obj)` - adds non-enumerable methods to `app` from `obj`
+- [define-property][] `app.define(key, value)` - adds non-enumerable `key` to `app`
 
 ```js
 console.log(app)           // => AppBase { AppBase: [Function: AppBase] }
 console.log(app.delegate)  // => [Function: delegateProperties]
 console.log(app.define)    // => [Function: defineProperty]
-console.log(app.isObject)  // => [Function: isObject]
 ```
 
 ### Static methods
+> Using following libraries:
+
+- [delegate-properties][] `AppBase.delegate(Parent.prototype, proto)`
+- [define-property][] `AppBase.define(Parent.prototype, key, value)`
+- [static-extend][] `AppBase.extend(Parent)`
 
 ```js
 console.log(AppBase)           // => [Function: AppBase]
 console.log(AppBase.delegate)  // => [Function: delegate]
 console.log(AppBase.define)    // => [Function: defineProperty]
-console.log(AppBase.inherit)   // => [Function: inherit]
-console.log(AppBase.extend)    // => [Function]
+console.log(AppBase.extend)    // => [Function: extend]
 ```
 
 ## Contributing
@@ -51,9 +60,11 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 
 [![tunnckoCore.tk][author-www-img]][author-www-url] [![keybase tunnckoCore][keybase-img]][keybase-url] [![tunnckoCore npm][author-npm-img]][author-npm-url] [![tunnckoCore twitter][author-twitter-img]][author-twitter-url] [![tunnckoCore github][author-github-img]][author-github-url]
 
-[class-utils]: https://github.com/jonschlinkert/class-utils
-[define-property]: https://github.com/jonschlinkert/jonschlinkert/define-property
-[delegate-properties]: https://github.com/jonschlinkert/jonschlinkert/delegate-properties
+[app-base]: https://github.com/tunnckocore/app-base
+[delegate-properties]: https://github.com/jonschlinkert/delegate-properties
+[define-property]: https://github.com/jonschlinkert/define-property
+[static-extend]: https://github.com/jonschlinkert/static-extend
+[npm]: https://docs.npmjs.com/
 
 [npmjs-url]: https://www.npmjs.com/package/app-base
 [npmjs-img]: https://img.shields.io/npm/v/app-base.svg?label=app-base
@@ -96,3 +107,4 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 
 [new-message-url]: https://github.com/tunnckoCore/ama
 [new-message-img]: https://img.shields.io/badge/ask%20me-anything-green.svg
+

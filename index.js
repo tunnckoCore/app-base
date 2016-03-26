@@ -41,9 +41,19 @@ define(AppBase, 'extend', extend(AppBase, function (Child) {
 }))
 
 /**
- * Expose `AppBase` constructor and instance
+ * Expose `AppBase` instance
+ *
  * @type {AppBase}
+ * @private
  */
 
 module.exports = new AppBase()
+
+/**
+ * Expose `AppBase` constructor
+ *
+ * @type {AppBase}
+ * @private
+ */
+
 module.exports.AppBase = AppBase

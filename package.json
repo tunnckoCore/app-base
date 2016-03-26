@@ -26,10 +26,21 @@
     "app-base"
   ],
   "verb": {
+    "run": true,
     "toc": false,
     "layout": "empty",
     "tasks": [
       "readme"
-    ]
+    ],
+    "reflinks": [
+      "app-base",
+      "delegate-properties",
+      "define-property",
+      "static-extend",
+      "npm"
+    ],
+    "lint": {
+      "reflinks": true
+    }
   }
 }
