@@ -11,7 +11,7 @@
     "test": "standard && node test.js"
   },
   "dependencies": {
-    "define-property": "^0.2.5",
+    "define-property": "^1.0.0",
     "delegate-properties": "github:tunnckoCore/delegate-properties",
     "static-extend": "^0.1.1"
   },
